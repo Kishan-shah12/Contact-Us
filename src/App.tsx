@@ -381,7 +381,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="text-gray-800 text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap"
               >
-                Portfolio
+                Our story
               </a>
               <a
                 href="https://protofilo-kishan-sah.vercel.app"
@@ -397,7 +397,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="text-gray-800 text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap"
               >
-                GitHub
+                Our work
               </a>
               <a
                 href="https://www.linkedin.com/in/kishan-sah-b97a73315/"
@@ -405,7 +405,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="text-gray-800 text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap"
               >
-                LinkedIn
+                Journal
               </a>
             </div>
 
@@ -415,7 +415,7 @@ export default function App() {
               onClick={handleDropALine}
               className="bg-black text-white text-sm font-medium px-4 sm:px-5 py-2 rounded-xl hover:bg-gray-800 active:scale-95 transition-all ml-auto whitespace-nowrap cursor-pointer shadow-sm"
             >
-              Drop a Line
+              Start a project
             </button>
           </nav>
 
