@@ -240,6 +240,21 @@ export default function App() {
   const [message, setMessage] = useState<string>('');
   const [sending, setSending] = useState<boolean>(false);
   const [sent, setSent] = useState<boolean>(false);
+  const nameInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleDropALine = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (sent) {
+      setSent(false);
+    }
+    const contactEl = document.getElementById('contact');
+    if (contactEl) {
+      contactEl.scrollIntoView({ behavior: 'smooth' });
+    }
+    setTimeout(() => {
+      nameInputRef.current?.focus();
+    }, 250);
+  };
 
   const toggleService = (service: string) => {
     setSelected((prev) =>
@@ -361,38 +376,47 @@ export default function App() {
             {/* Nav Links */}
             <div className="hidden sm:flex items-center gap-6">
               <a
-                href="#story"
+                href="https://protofilo-kishan-sah.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-800 text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap"
               >
-                Our story
+                Portfolio
               </a>
               <a
-                href="#expertise"
+                href="https://protofilo-kishan-sah.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-800 text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap"
               >
                 Expertise
               </a>
               <a
-                href="#work"
+                href="https://github.com/Kishan-shah12"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-800 text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap"
               >
-                Our work
+                GitHub
               </a>
               <a
-                href="#journal"
+                href="https://www.linkedin.com/in/kishan-sah-b97a73315/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-800 text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap"
               >
-                Journal
+                LinkedIn
               </a>
             </div>
 
             {/* CTA Button */}
-            <a
-              href="#contact"
-              className="bg-black text-white text-sm font-medium px-4 sm:px-5 py-2 rounded-xl hover:bg-gray-800 transition-colors ml-auto whitespace-nowrap"
+            <button
+              type="button"
+              onClick={handleDropALine}
+              className="bg-black text-white text-sm font-medium px-4 sm:px-5 py-2 rounded-xl hover:bg-gray-800 active:scale-95 transition-all ml-auto whitespace-nowrap cursor-pointer shadow-sm"
             >
-              Start a project
-            </a>
+              Drop a Line
+            </button>
           </nav>
 
           {/* Spacer */}
@@ -499,6 +523,7 @@ export default function App() {
                     {/* Name + Email inputs */}
                     <div className="flex flex-col sm:flex-row gap-2">
                       <input
+                        ref={nameInputRef}
                         type="text"
                         required
                         value={name}
