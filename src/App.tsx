@@ -270,7 +270,7 @@ export default function App() {
 
     try {
       // Direct live email routing to jnkishansah@gmail.com
-      await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
+      const res = await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -286,6 +286,8 @@ export default function App() {
           _captcha: 'false',
         }),
       });
+      const result = await res.json();
+      console.log('FormSubmit response status:', res.status, result);
     } catch (err) {
       console.warn('Form routing notice:', err);
     } finally {
