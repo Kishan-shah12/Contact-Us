@@ -308,7 +308,7 @@ export default function App() {
             <a
               href="#"
               className="flex items-center gap-2 shrink-0 group"
-              aria-label="Forma Home"
+              aria-label="Kishan Sah"
             >
               <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500/10 via-purple-500/15 to-pink-500/10 p-1 flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_16px_rgba(139,92,246,0.3)]">
                 <svg
@@ -354,7 +354,7 @@ export default function App() {
                 </svg>
               </div>
               <span className="font-semibold text-gray-950 tracking-tight text-sm pr-1">
-                Forma
+                Kishan Sah
               </span>
             </a>
 

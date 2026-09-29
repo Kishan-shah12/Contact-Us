@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✨ Forma — 3D Responsive Contact Landing Experience
+# ✨ Kishan Sah — 3D Responsive Contact Landing Experience
 
 <p align="center">
   <strong>A cutting-edge, cinematic full-screen video background landing page and interactive 3D contact portal.</strong>
@@ -32,7 +32,7 @@
 
 ## 🎯 Overview
 
-**Forma** is an immersive, production-grade contact page designed to captivate visitors at first glance. Built for modern portfolios and agency landing pages, it blends rich visual aesthetics—cinematic ambient video, glassmorphism, micro-animations, and true **3D responsive tilt physics**—with real-time email delivery directly to your Gmail inbox.
+**Kishan Sah's Contact Portal** is an immersive, production-grade contact page designed to captivate visitors at first glance. Built for modern portfolios and creative engineering showcases, it blends rich visual aesthetics—cinematic ambient video, glassmorphism, micro-animations, and true **3D responsive tilt physics**—with real-time email delivery directly to your Gmail inbox.
 
 ---
 
