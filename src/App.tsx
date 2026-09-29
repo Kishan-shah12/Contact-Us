@@ -54,6 +54,10 @@ const VIDEO_URL =
 
 const RECIPIENT_EMAIL = 'jnkishansah@gmail.com';
 
+// Web3Forms Access Key for jnkishansah@gmail.com
+const WEB3FORMS_ACCESS_KEY =
+  (import.meta as any).env?.VITE_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE';
+
 const SERVICES: string[] = [
   'Website',
   'Mobile App',
@@ -269,25 +273,25 @@ export default function App() {
     setSending(true);
 
     try {
-      // Direct live email routing to jnkishansah@gmail.com
-      const res = await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
+      // Direct live email routing via Web3Forms (99.99% uptime, no domain lock)
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
         },
         body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
           name,
           email,
           message,
           services: selected.length > 0 ? selected.join(', ') : 'None specified',
-          _subject: `New Project Inquiry from ${name} (${email})`,
-          _template: 'table',
-          _captcha: 'false',
+          subject: `New Project Inquiry from ${name} (${email})`,
+          from_name: 'Kishan Sah Portfolio',
         }),
       });
       const result = await res.json();
-      console.log('FormSubmit response status:', res.status, result);
+      console.log('Web3Forms response:', res.status, result);
     } catch (err) {
       console.warn('Form routing notice:', err);
     } finally {
