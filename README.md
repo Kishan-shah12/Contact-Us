@@ -144,20 +144,8 @@ Generates a minified, production-ready build in `dist/`.
   - Electric Sapphire: `#0A66C2` / `#2563EB`
   - Emerald Beacon: `#10B981` / `#059669`
   - Royal Indigo: `#1877F2` / `#6366F1`
-
----
-
-## 🚀 One-Click Deployment to Vercel
-
-Deploy your own live version in under 60 seconds:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Kishan-shah12/Contact-Us)
-
-1. Click the button above.
-2. Sign in to your Vercel account.
-3. Click **Create** — Vercel detects Vite automatically and provisions an SSL-secured live URL!
-
----
+ 
+----
 
 ## 👨‍💻 Author
 
